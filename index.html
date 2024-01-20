@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="urlInput" name="urlInput" placeholder="Enter URL">
+    <button id="btn">Go</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', function() {
+            const url = document.getElementById('urlInput').value;
+            document.getElementById('result').innerHTML = "Loading...";
+
+            fetch(`https://image-to-text-seven-dusky.vercel.app/generate?imageUrl=${url}`)
+                .then(response => {
+                    // Check if the response is in JSON format
+                    if (response.headers.get('content-type').includes('application/json')) {
+                        return response.json();
+                    } else {
+                        // If not JSON, handle the response as text
+                        return response.text();
+                    }
+                })
+                .then(data => {
+                    // Display the parsed data in the result element
+                    document.getElementById('result').innerHTML = typeof data === 'object' ? data.text : data;
+                })
+                .catch(error => {
+                    document.getElementById('result').innerHTML = error;
+                });
+        });
+    </script>
+</body>
+</html>
