@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" crossorigin="" data-precedence="next" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/ericnograles/browser-image-resizer@2.4.0/dist/index.js"
+        as="script" />
+    <title>Image Caption Generator</title>
+    <meta name="description"
+        content="Generate captions for your images using AI for free online. Perfect for image caption generate to use in Instagram or other social media." />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+
+    <meta property="og:title" content="Image Caption Generator" />
+    <meta property="og:description"
+        content="Generate captions for your images using AI for free online. Perfect for image caption generate to use in Instagram or other social media." />
+
+    <meta property="og:site_name" content="Image Caption Generator" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Image Caption Generator (Free Online Tool)" />
+    <meta name="twitter:description"
+        content="Generate captions for your images using AI for free online. Perfect for image caption generate to use in Instagram or other social media." />
+
+    <meta name="twitter:image:width" content="1200" />
+    <meta name="twitter:image:height" content="630" />
+
+
+</head>
+
+<body class="bg-white text-black dark:bg-black dark:text-white">
+    <!-- <nav class="navbar">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="/credit.html" class="nav-link">Credit</a></li>
+            </ul>
+        </div>
+    </nav> -->
+    <div class="max-w-xl mx-auto py-12 px-4 md:px-0">
+        <div class=" text-gray-900 dark:text-white">
+            <div class=" flex flex-col items-center gap-2">
+                <h1 class=" text-center">Image Caption Generator</h1>
+            </div>
+            <p class=" text-gray-700 dark:text-gray-300 text-center text-sm md:text-lg mb-8">
+                Generate captions for images using AI free online.</p>
+            <form class=" mt-4" onsubmit="return false">
+                <div id="image">
+
+              
+                <label for="image" class=" default-label" style="
+                color: antiquewhite;
+            ">Upload Image</label>
+
+                <div class="file-upload">
+                    <span>Choose Image</span>
+                    <input type="file" id="imageInput" name="image" accept="image/*" />
+                
+                </div>
+                <div id="imagePreview"></div>
+                <div class="container" style="display: flex; justify-content: center;">
+                    <button id="dismiss-image" class="default-button" style=" display:none;width: 10vw; background-color: rgb(193, 13, 13);" onclick="clearImagePreview()">Dismiss Image</button>
+                </div>
+            </div>
+                
+                <div id="link">
+                <label for="imagelink" class=" default-label" style="
+                color: antiquewhite;
+            ">Image Link</label>
+                <input type="text" id="imagelink" placeholder="example: https://example.com/image.png"
+                    class=" default-input" name="imagelink" />
+                </div>
+                <br>
+                <button id="generate-caption" type="submit" class=" default-button">Generate Captions</button>
+            </form>
+            <br>
+            <div class="result" style="text-align: center; ">
+                <span id="result" style="font-size: 40px; color:blueviolet; font-family:'Times New Roman', Times, serif; text-decoration:solid; display: none;"></span>
+            </div>
+            <div class=" mt-12 pt-6 border-t dark:border-gray-800">
+                <h2 class=" text-2xl">What is Image Caption Generator?</h2>
+                <p class="">
+                    Image Caption Generator is an advanced tool that uses artificial intelligence to automatically
+                    generate image captions. It provides a seamless experience for creating informative and engaging
+                    descriptions, ensuring your audience understands the story your images tell. Best of all, this tool
+                    is free, requires no registration, and is designed to be easily accessible.</p>
+                <h2 class=" text-2xl">Why Image Captions Matter</h2>
+                <p class="">Captions are important because they create a bridge between your visual content and your
+                    audience. Add context, deepen understanding, and encourage emotional connection. Perfect for
+                    bloggers, marketers, educators, and business owners, make your images more impactful with compelling
+                    captions. Image Caption Generator uses advanced neural networks to create relevant, engaging, and
+                    descriptive captions tailored to your audience's interests.
+                <p>
+                <h2 class=" text-2xl">How It Works</h2>
+                <p class="">Our caption generator uses AI and computer vision to analyze and understand your images.
+                    Upload a photo, choose a caption tone, and add relevant details
+                    to help the AI ​​create an accurate description. As AI identifies the content of hisimages, adding
+                    information about people and places to your photos will help create more meaningful
+                    captions.</p>
+                <p class="">Whether you're looking for creative social media captions, engaging blog post descriptions,
+                    or effective ALT text for images, this tool is extremely versatile. It's free to use and doesn't
+                    require an account, making it an invaluable tool for your digital content strategy.</p>
+                <h2 class=" text-2xl">Improving SEO with Captions</h2>
+                <p class="">A strategically designed caption does more than just provide a descriptive image. These play
+                    an important role in improving the website's SEO. Adding detailed, keyword-rich subtitles makes your
+                    content more discoverable on search engines, increasing your website's visibility and user
+                    engagement. Use Caption Generator to increase your online presence and attract more visitors to your
+                    website.</p>
+
+            </div>
+        </div>
+        <div class="py-5 mt-5 border-t dark:border-gray-800 text-gray-500 text-xs dark:text-gray-400">
+            <div class="flex items-center flex-col md:flex-row md:justify-between gap-2"><span>© 2024
+            </div>
+        </div>
+        <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript" fetchPriority="high"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="script.js"></script>
+        <script src="sweetalert.js"></script>
+        <script src="imageScript.js"></script>
+        <script src="security.js"></script>
+</body>
+
+</html>
